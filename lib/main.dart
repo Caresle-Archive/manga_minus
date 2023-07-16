@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
         appBar: AppBarManga(),
         extendBodyBehindAppBar: true,
         bottomNavigationBar: NavigationMenu(),
-        body: ScreenManga()
+        body: ScreenManga(),
+        
       ),
     );
   }

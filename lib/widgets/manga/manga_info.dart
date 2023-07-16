@@ -26,7 +26,34 @@ class MangaInfo extends StatelessWidget {
               fontSize: 16
             ),
           ),
+          const _LanguageTag()
         ]
+      ),
+    );
+  }
+}
+
+class _LanguageTag extends StatelessWidget {
+  const _LanguageTag();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.grey.shade800,
+        gradient: LinearGradient(
+          colors: [
+            Colors.grey.shade800,
+            Colors.grey.shade700
+          ],
+          begin: Alignment.bottomCenter,
+          end: Alignment.topCenter,
+        ),
+        borderRadius: BorderRadius.circular(4)
+      ),
+      child: const Padding(
+        padding: EdgeInsets.all(4.0),
+        child: Text('ENG', style: TextStyle(color: Colors.white),),
       ),
     );
   }
