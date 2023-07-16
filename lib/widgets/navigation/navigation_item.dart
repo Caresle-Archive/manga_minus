@@ -13,7 +13,7 @@ class NavigationItem extends StatelessWidget {
     return IconButton(
       onPressed: () {},
       icon: icon,
-      iconSize: 36,
+      iconSize: 24,
     );
   }
 }

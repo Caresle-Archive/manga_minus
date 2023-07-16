@@ -8,6 +8,7 @@ class NavigationMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     return BottomAppBar(
+      height: 64,
       color: colors.background,
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
