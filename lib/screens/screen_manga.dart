@@ -1,40 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:manga_minus/widgets/manga/favorite_button.dart';
+import 'package:manga_minus/widgets/manga/manga_info.dart';
+import 'package:manga_minus/widgets/manga/option_button.dart';
 
 class ScreenManga extends StatelessWidget {
   const ScreenManga({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final Size screen = MediaQuery.of(context).size;
+    
     return Column(
       children: [
         const _TopImage(),
-        const Text(
-          'Manga Title',
-          textAlign: TextAlign.left,
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        Text('Manga Author',
-          style: TextStyle(
-            color: Colors.grey.shade400,
-            fontSize: 16
-          ),
-        ),
+        const MangaInfo(),
+        const FavoriteButton(),
         SizedBox(
-          width: 200,
-          child: OutlinedButton(
-            onPressed: () {},
-            style: ButtonStyle(
-              foregroundColor: MaterialStateProperty.all(Colors.yellow),
-              shape: MaterialStateProperty.all(
-                const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4)))
-              ),
-              side: MaterialStateProperty.all(const BorderSide(color: Colors.yellow))
+          height: 64,
+          width: screen.width,
+          child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            OptionButton(
+              icon: Icon(Icons.info),
+              text: 'More Detail',
             ),
-            child: const Text('Favorited'),
-          ),
+            OptionButton(
+              icon: Icon(Icons.language),
+              text: 'See all language',
+            ),
+          ],
+        ),
         )
 
       ],

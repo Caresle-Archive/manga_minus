@@ -10,7 +10,7 @@ class AppBarManga extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back), onPressed: () {},
+        icon: const Icon(Icons.arrow_back, color: Colors.white,), onPressed: () {},
       ),
       backgroundColor: const Color.fromRGBO(0, 0, 0, 0),
       actions: [
@@ -18,7 +18,7 @@ class AppBarManga extends StatelessWidget implements PreferredSizeWidget {
           padding: const EdgeInsets.all(8.0),
           child: IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.share),
+            icon: const Icon(Icons.share, color: Colors.white),
           ),
         )
       ],
