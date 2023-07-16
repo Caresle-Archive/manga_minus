@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:manga_minus/config/theme/app_theme.dart';
+import 'package:manga_minus/screens/screen_home.dart';
+import 'package:manga_minus/widgets/navigation/navigation_menu.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,14 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+      theme: AppTheme().theme(),
+      title: 'Manga Minus',
+      home: const Scaffold(
+        bottomNavigationBar: NavigationMenu(),
+        body: ScreenHome()
       ),
     );
   }
