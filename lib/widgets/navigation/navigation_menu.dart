@@ -13,7 +13,7 @@ class NavigationMenu extends StatelessWidget {
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          NavigationItem(icon: Icon(Icons.calendar_month)),
+          NavigationItem(icon: Icon(Icons.calendar_month), selected: true,),
           NavigationItem(icon: Icon(Icons.stars)),
           NavigationItem(icon: Icon(Icons.search)),
           NavigationItem(icon: Icon(Icons.book)),

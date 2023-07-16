@@ -15,9 +15,11 @@ class HeaderItem extends StatelessWidget {
     return SafeArea(
       child: Container(
         decoration: boxDecoration,
-        child: SizedBox(
-          width: screen.width,
+        child: Image.network(
+          "https://areajugones.sport.es/wp-content/uploads/2021/04/imagen-2021-04-15-093751.jpg",
           height: 128,
+          width: screen.width,
+          fit: BoxFit.cover,
         ),
       ),
     );
