@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Manga Minus',
       home: const Scaffold(
         appBar: AppBarManga(),
+        extendBodyBehindAppBar: true,
         bottomNavigationBar: NavigationMenu(),
         body: ScreenManga()
       ),
