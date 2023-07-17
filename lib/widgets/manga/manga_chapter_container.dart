@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manga_minus/widgets/manga/manga_chapter_list.dart';
 
 class MangaChapterContainer extends StatelessWidget {
   const MangaChapterContainer({super.key});
@@ -7,6 +8,24 @@ class MangaChapterContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size screen = MediaQuery.of(context).size;
 
+    return Column(
+      children: [
+        _ChapterHeader(screen: screen),
+        const MangaChapterList(),
+      ],
+    );
+  }
+}
+
+class _ChapterHeader extends StatelessWidget {
+  const _ChapterHeader({
+    required this.screen,
+  });
+
+  final Size screen;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.grey.shade800
