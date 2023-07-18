@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manga_minus/screens/screen_profile.dart';
 
 class NavigationItem extends StatelessWidget {
   final Icon icon;
@@ -10,16 +11,22 @@ class NavigationItem extends StatelessWidget {
     this.selected = false
   });
 
-  IconButton general() {
-    return IconButton(onPressed: () {}, icon: icon, iconSize: 24,);
+  void Function()? goToProfile(context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => const ScreenProfile(),)
+    );
   }
 
-  IconButton primary() {
-    return IconButton(onPressed: () {}, icon: icon, color: Colors.pink, iconSize: 24,);
+  IconButton general(context) {
+    return IconButton(onPressed: () => goToProfile(context), icon: icon, iconSize: 24,);
+  }
+
+  IconButton primary(context) {
+    return IconButton(onPressed: () => goToProfile(context), icon: icon, color: Colors.pink, iconSize: 24,);
   }
 
   @override
-  Widget build(BuildContext context) {    
-    return selected ? primary() : general();
+  Widget build(BuildContext context) {
+    return selected ? primary(context) : general(context);
   }
 }
