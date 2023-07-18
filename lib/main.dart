@@ -14,10 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme().theme(),
       title: 'Manga Minus',
-      home: const Scaffold(
-        bottomNavigationBar: NavigationMenu(),
-        body: ScreenHome(),
-      ),
+      home: const ScreenHome()
     );
   }
 }
