@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manga_minus/screens/screen_manga.dart';
 
 class MangaItem extends StatelessWidget {
   final String name;
@@ -14,16 +15,23 @@ class MangaItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size screen = MediaQuery.of(context).size;
     
-    return Column(
-      children: [
-        Container(
-          width: ( screen.width - 20 ) / 2,
-          margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
-          height: 160,
-          child: _ImageManga(url: url),
-        ),
-        Text(name),
-      ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const ScreenManga(),)
+        );
+      },
+      child: Column(
+        children: [
+          Container(
+            width: ( screen.width - 20 ) / 2,
+            margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+            height: 160,
+            child: _ImageManga(url: url),
+          ),
+          Text(name),
+        ],
+      ),
     );
   }
 }

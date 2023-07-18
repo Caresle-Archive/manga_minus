@@ -1,29 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:manga_minus/widgets/manga/app_bar_manga.dart';
 import 'package:manga_minus/widgets/manga/favorite_button.dart';
 import 'package:manga_minus/widgets/manga/manga_chapter_container.dart';
 import 'package:manga_minus/widgets/manga/manga_info.dart';
 import 'package:manga_minus/widgets/manga/options_container.dart';
+import 'package:manga_minus/widgets/navigation/navigation_menu.dart';
 
 class ScreenManga extends StatelessWidget {
   const ScreenManga({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final Size screen = MediaQuery.of(context).size;
 
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          const _TopImage(),
-          const MangaInfo(),
-          const FavoriteButton(),
-          const OptionsContainer(),
-          Image.network(
-            'https://i.ytimg.com/vi/Hi4Hk0CDcjc/maxresdefault.jpg',
-          ),
-          const SizedBox(height: 12,),
-          const MangaChapterContainer(),
-        ],
+    return Scaffold(
+      appBar: const AppBarManga(),
+      extendBodyBehindAppBar: true,
+      bottomNavigationBar: const NavigationMenu(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const _TopImage(),
+            const MangaInfo(),
+            const FavoriteButton(),
+            const OptionsContainer(),
+            Image.network(
+              'https://i.ytimg.com/vi/Hi4Hk0CDcjc/maxresdefault.jpg',
+            ),
+            const SizedBox(height: 12,),
+            const MangaChapterContainer(),
+          ],
+        ),
       ),
     );
   }
