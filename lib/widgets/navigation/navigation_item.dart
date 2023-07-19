@@ -11,7 +11,7 @@ class NavigationItem extends StatelessWidget {
     this.selected = false
   });
 
-  void Function()? goToProfile(context) {
+  void goToProfile(context) {
     Navigator.of(context).push(
       MaterialPageRoute(builder: (context) => const ScreenProfile(),)
     );
