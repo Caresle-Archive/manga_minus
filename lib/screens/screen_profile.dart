@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manga_minus/widgets/manga/app_bar_manga.dart';
 import 'package:manga_minus/widgets/navigation/navigation_menu.dart';
 import 'package:manga_minus/widgets/profile/profile_grid.dart';
 import 'package:manga_minus/widgets/profile/profile_options.dart';
@@ -10,6 +11,7 @@ class ScreenProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      appBar: AppBarManga(),
       bottomNavigationBar: NavigationMenu(),
       body: SingleChildScrollView(
         child: SafeArea(

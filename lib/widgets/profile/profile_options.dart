@@ -46,7 +46,8 @@ class _BackgroundCard extends StatelessWidget {
       width: screen.width,
       height: 256,
       decoration: BoxDecoration(
-        color: Colors.grey.shade800
+        color: Colors.grey.shade800,
+        borderRadius: BorderRadius.circular(4)
       ),
     );
   }

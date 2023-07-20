@@ -11,9 +11,12 @@ class ProfileGrid extends StatelessWidget {
       height: 256,
       child: GridView.count(
         crossAxisCount: 2,
+        mainAxisSpacing: 2,
+        crossAxisSpacing: 4,
+        physics: const NeverScrollableScrollPhysics(),
         children: const <Widget>[
-          ProfileItem(),
-          ProfileItem(),
+          ProfileItem(text: '130 Mangas completed'),
+          ProfileItem(text: '124 Mangas reading'),
         ],
       ),
     );
