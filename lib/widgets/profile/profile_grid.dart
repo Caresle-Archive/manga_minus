@@ -8,7 +8,7 @@ class ProfileGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 256,
-      height: 256,
+      height: 160,
       child: GridView.count(
         crossAxisCount: 2,
         mainAxisSpacing: 2,

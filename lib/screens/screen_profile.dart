@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manga_minus/screens/screen_home.dart';
 import 'package:manga_minus/widgets/manga/app_bar_manga.dart';
 import 'package:manga_minus/widgets/navigation/navigation_menu.dart';
 import 'package:manga_minus/widgets/profile/profile_grid.dart';
@@ -30,11 +31,14 @@ class _ScreenContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        ProfileTitle(),
-        ProfileOptions(),
-        ProfileGrid()
+        const ProfileTitle(),
+        const ProfileOptions(),
+        const ProfileGrid(),
+        ElevatedButton(onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ScreenHome(),));
+        }, child: const Text('Ver mangas')),
       ],
     );
   }

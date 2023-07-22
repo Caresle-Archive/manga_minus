@@ -32,7 +32,7 @@ class ProfileItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Icon(Icons.star),
-            Text(text)
+            Text(text, textAlign: TextAlign.center,)
           ],
         )
       ],
