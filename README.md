@@ -1,16 +1,9 @@
 # manga_minus
 
-A new Flutter project.
+A UI Clone of [Manga Plus](https://mangaplus.shueisha.co.jp/updates) for practicing flutter.
 
-## Getting Started
+# Images
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![](./docs/1.jpg)
+![](./docs/2.jpg)
+![](./docs/3.jpg)
